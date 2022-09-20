@@ -1,44 +1,46 @@
-/*
-Folhas de estilo do site Mulheres.Tech 
-*/
+/****************************
+ * Folhas de estilo do site *
+ ****************************/
 
-/* Reset */
+/* Reset geral */
 * {
     box-sizing: border-box;
     outline: none;
 }
 
-/* Elementos "root" (raiz) */
+/* Reset dos elementos "root" (raiz) */
 html, body {
     position: relative;
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
+
     /* Fonte padrão do site */
     font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+
     /* Tamanho da fonte padrão → 1rem */
     font-size: 16px;
 }
 
-/* Links */
+/* ?Reset dos links */
 a {
     color: rgb(70, 130, 180);
     text-decoration: none;
 }
 
-/* Pseudo classe "hover" → Passa o mouse sobre */
+/* Pseudo classe ":hover" → Ao passar o mouse sobre o elemento */
 a:hover {
     color: rgb(255, 69, 0);
     text-decoration: underline;
 }
 
-/* Elementos semânticos de bloco */
+/* Reset dos elementos semânticos de bloco */
 header, nav, main, article, aside, footer {
     display: block;
 }
 
-/* Fundo */
+/* Estilização do fundo (background) */
 body {
     background-attachment: fixed;
     background-color: rgb(175, 0, 175);
@@ -48,19 +50,20 @@ body {
     background-size: cover;
 }
 
-/* Wrap */
+/* Wrap → Elemento que envolve os outros elementos da página */
 #wrap {
-    background-color: aqua;
-    
+    background-color: aqua; /* REMOVER - Somente para teste */
+
+    /* Tamanho e posicionamento responsivo */
     position: relative;
     width: 100%;
     height: 100%;
 
     /* Limita crescimento do bloco */
-    min-width: 280px;
-    max-width: 1024px;
+    min-width: 280px; /* 320px - barra de rolagem - segurança */
+    max-width: 1024px; /* 1080px - barra de rolagem - segurança */
 
-    /* Centraliza bloco */
+    /* Centraliza bloco inteiro */
     margin: auto;
-    
+
 }
