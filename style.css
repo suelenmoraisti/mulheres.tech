@@ -2,7 +2,14 @@
  * Folhas de estilo do site *
  ****************************/
 
-/* Reset geral */
+ /*
+    Para saber mais, estude e faça os exemplos do site de referência
+    https://www.w3schools.com/css/
+ */
+
+/***************
+ * Reset geral *
+ ***************/
 * {
     box-sizing: border-box;
     outline: none;
@@ -23,7 +30,7 @@ html, body {
     font-size: 16px;
 }
 
-/* ?Reset dos links */
+/* Reset dos links */
 a {
     color: rgb(70, 130, 180);
     text-decoration: none;
@@ -50,25 +57,24 @@ body {
     background-size: cover;
 }
 
-/* Wrap → Elemento que envolve os outros elementos da página */
+/* Wrap → Elemento que envolve os outros elementos visuais da página */
 #wrap {
 
-    /* Tamanho e posicionamento responsivo */
+    /* Posicionamento e tamanho responsivo */
     position: relative;
     width: 100%;
     height: 100%;
 
-    /* Limita crescimento do bloco */
-
-    /* 320px - barra de rolagem - segurança */
+    /* 
+    Limita crescimento do wrap:
+        • Mínimo de 320px - barra de rolagem - segurança = 280px
+        • Máximo de 1080px - barra de rolagem - segurança = 1024px
+    */
     min-width: 280px;
-
-    /* 1080px - barra de rolagem - segurança */
     max-width: 1024px;
 
-    /* Centraliza bloco inteiro */
+    /* Centraliza wrap na viewport */
     margin: auto;
-
 }
 
 /*************************
@@ -76,17 +82,21 @@ body {
  *************************/
 
 #wrap>header {
-    background-color: rgba(255, 255, 255, 0.846);
     display: flex;
     align-items: center;
+
+    /* Aplicando transparência com rgba() */
+    background-color: rgba(255, 255, 255, 0.846);
 }
 
 #wrap>header a {
     display: block;
     font-size: 4rem;
     color: rgb(255, 176, 255);
-    -webkit-text-stroke: 2px purple;
     padding: .5rem 1rem .5rem .5rem;
+
+    /* Experimental → Aplica borda ao texto */
+    -webkit-text-stroke: 2px purple;
 }
 
 #wrap>header h1 {
@@ -109,9 +119,11 @@ body {
 #wrap>nav {
     background: rgb(66, 0, 66);
     display: flex;
-    justify-content: flex-end;
     border-top: 1px solid rgb(66, 0, 66);
     border-bottom: 1px solid rgb(66, 0, 66);
+
+    /* Alinha todos os flex-box à direita */
+    justify-content: flex-end;
 }
 
 #wrap>nav a {
@@ -131,19 +143,25 @@ body {
     margin-top: .35rem;
 }
 
+/* "Empurra" somente o primeiro elemento para a esquerda */
 #wrap>nav a:first-child {
     margin-right: auto;
 }
 
+/* Ao passar o ponteiro do mouse sobre o item */
 #wrap>nav a:hover {
     background-color: rgb(255, 244, 255);
     color: rgb(66, 0, 66);
     text-decoration: none;
 }
 
-/* Tornando o menu principal responsivo */
-/* Para larguras de telas iguais ou maiores que ???px */
+/* 
+    Tornando o menu principal responsivo em larguras
+    de tela iguais ou maiores que 480px
+*/
 @media (min-width: 480px) {
+
+    /* Este bloco só será usado se o requisito acima for verdadeiro */
 
     #wrap>nav i {
         font-size: 1.2rem;
@@ -162,6 +180,8 @@ body {
 
 #wrap>main {
     background-color: rgba(255, 255, 255, 1);
-    overflow: auto;
     padding: 0 1rem;
+
+    /* Evita efeito da margem do primeiro e ultimo filhos do elemento */
+    overflow: auto;
 }
