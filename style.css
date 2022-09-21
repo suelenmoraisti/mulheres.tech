@@ -216,6 +216,8 @@ body {
     color: rgb(255, 240, 255);
 }
 
+/* Bloco superior do rodapé */
+
 #fsup {
     display: flex;
     align-items: center;
@@ -235,6 +237,8 @@ body {
 #fsup a:hover {
     color: rgb(250, 167, 250);
 }
+
+/* Bloco inferior do rodapé */
 
 #finf {
     display: flex;
@@ -267,7 +271,11 @@ body {
 
 }
 
-/* Sticky Footer */
+/* 
+    Sticky Footer
+    Força o rodapé a aparecer sempre na parte inferior da tela,
+    aumentando automaticamente o height de <main>.
+*/
 #wrap {
     display: flex;
     flex-direction: column;
