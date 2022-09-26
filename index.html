@@ -12,6 +12,9 @@
   <!-- Define a tabela de caracteres universal -->
   <meta charset="UTF-8" />
 
+  <!-- Define o ícone de favoritos -->
+  <link rel="icon" href="/img/favicon.jpg">
+
   <!-- Torna a página responsivo -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -48,7 +51,7 @@
     <!-- Cabeçalho da página -->
     <header>
       <!-- Logotipo clicável usando Font Awesome -->
-      <a href="/" title="Página inicial">
+      <a href="home" title="Página inicial">
         <i class="fa-solid fa-laptop-code fa-fw"></i>
       </a>
 
@@ -68,7 +71,7 @@
        -->
     <nav>
       <!-- Link do item de menu para a página especificada -->
-      <a href="/" title="Página inicial">
+      <a href="home" title="Página inicial">
         <!-- Ícone do ítem usando Font Awesome -->
         <i class="fa-solid fa-house-chimney fa-fw"></i>
         <!-- Etiqueta (label) do item -->
@@ -80,17 +83,17 @@
           Tem a mesma estrutura do anterior. 
         -->
 
-      <a href="/contacts" title="Faça contato">
+      <a href="contacts" title="Faça contato">
         <i class="fa-solid fa-comments fa-fw"></i>
         <span>Contatos</span>
       </a>
 
-      <a href="/about" title="Sobre a gente">
+      <a href="about" title="Sobre a gente">
         <i class="fa-solid fa-circle-info fa-fw"></i>
         <span>Sobre</span>
       </a>
 
-      <a href="/profile" title="Perfil de usuário">
+      <a href="profile" title="Perfil de usuário">
         <i class="fa-regular fa-user fa-fw"></i>
         <span>Perfil</span>
       </a>
@@ -101,41 +104,7 @@
         Este bloco terá um conteúdo diferente para cada página acessada.
       -->
     <main>
-      <!-- Conteúdo principal -->
-      <article>
 
-        <!--
-            Este é um conteúdo "fake", apenas para "encher linguiça"
-            e facilitar a construção do layout.
-          -->
-        <h2>Título de teste</h2>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quia provident reiciendis earum, tenetur reprehenderit iure ipsum fugit praesentium alias deserunt sed maiores id rerum odio delectus perferendis voluptatum totam!</p>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero hic, modi pariatur culpa animi cum! Consequatur, odit! Repudiandae, dolorem temporibus, quaerat, unde enim error eum minus praesentium libero quibusdam consequuntur.</p>
-        <img src="https://picsum.photos/200/200" alt="Imagem aleatória." />
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia recusandae illum aliquam aperiam, laborum fugiat quos sunt expedita culpa! Minima harum mollitia aperiam nihil dolorem animi accusantium quia maxime expedita.</p>
-        <h3>Lista de links:</h3>
-        <ul>
-          <li><a href="https://github.com/Luferat">GitHub do Fessô</a></li>
-          <li><a href="https://catabits.com.br">Blog do Fessô</a></li>
-          <li><a href="https://facebook.com/Luferat">Facebook do Fessô</a></li>
-        </ul>
-        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam commodi inventore nemo doloribus asperiores provident, recusandae maxime quam molestiae sapiente autem, suscipit perspiciatis. Numquam labore minima, accusamus vitae exercitationem quod!</p>
-        <!-- Fim do conteúdo "fake" -->
-
-      </article>
-
-      <!-- Conteúdo complementar / barra lateral -->
-      <aside>
-
-        <!--
-            Este é um conteúdo "fake", apenas para "encher linguiça"
-            e facilitar a construção do layout.
-          -->
-        <h3>Barra lateral</h3>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, cumque porro.</p>
-        <!-- Fim do conteúdo "fake" -->
-
-      </aside>
     </main>
 
     <!-- Rodapé -->
@@ -143,7 +112,7 @@
       <!-- Bloco superior do rodapé -->
       <div id="fsup">
         <!-- Link para a raiz do aplicativo (página inicial) -->
-        <a href="/" title="Página inicial">
+        <a href="home" title="Página inicial">
           <i class="fa-solid fa-house-chimney fa-fw"></i>
         </a>
 
@@ -178,15 +147,15 @@
         <!-- Menu de links internos -->
         <nav>
           <h4>Acesso rápido:</h4>
-          <a href="/contacts">
+          <a href="contacts">
             <i class="fa-solid fa-comments fa-fw"></i>
             <span>Contatos</span>
           </a>
-          <a href="/about">
+          <a href="about">
             <i class="fa-solid fa-circle-info fa-fw"></i>
             <span>Sobre</span>
           </a>
-          <a href="/policies">
+          <a href="policies">
             <i class="fa-solid fa-user-lock fa-fw"></i>
             <span>Sua privacidade</span>
           </a>
