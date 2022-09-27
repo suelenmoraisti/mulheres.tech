@@ -26,22 +26,24 @@
   * Importa a fonte "Lato" do Google Fonts.
   *  
   * A bilbioteca Google Fonts fornece milhares de fontes de uso livre para 
-  * aplicativos. Para saber mais, acesse:
-  * https://fonts.google.com/    
+  * aplicativos. Para saber mais, acesse: https://fonts.google.com/    
   */
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
-/***************
- * Reset geral *
- ***************/
+/***********************
+ * Reset geral do tema *
+ ***********************/
+
+/* Todos os elementos */
 * {
   /* Tamanho do elemento é definido pelas bordas */
   box-sizing: border-box;
+
   /* Remove serrilhado ao redor de imagens e links selecionados */
   outline: none;
 }
 
-/* Reset dos elementos "root" (raiz) */
+/* Elementos "root" (raiz) */
 html,
 body {
   /* Tamanho e posicionamento */
@@ -54,20 +56,20 @@ body {
   /* Fonte padrão do site, usando a fonte "Lato" do Google Fonts */
   font-family: "Lato", sans-serif;
 
-  /* Tamanho da fonte padrão → 1rem == 16px */
+  /* Tamanho da fonte padrão → 1rem = 16px */
   font-size: 16px;
 
   /* Cor da fonte padrão */
   color: rgb(55, 0, 55);
 }
 
-/* Reset dos links */
+/* Links */
 a {
   color: rgb(70, 130, 180);
   text-decoration: none;
 }
 
-/* Pseudo classe ":hover" → Ao passar o mouse sobre o elemento */
+/* Ao passar o mouse sobre um link, usando a pseudo classe ":hover" */
 a:hover {
   color: rgb(255, 69, 0);
   text-decoration: underline;
@@ -83,18 +85,18 @@ body {
   background-size: cover;
 }
 
-/* wrap */
+/* Elemento #wrap */
 #wrap {
   /* Posicionamento e responsividade */
   position: relative;
   width: 100%;
   height: 100%;
 
-  /* Estabelece limites */
+  /* Estabelece limites de largura */
   min-width: 280px;
   max-width: 1024px;
 
-  /* Centraliza página na viewport */
+  /* Centraliza elemento na viewport do navegador */
   margin: auto;
 }
 
@@ -102,12 +104,13 @@ body {
  * Cabeçalho *
  *************/
 
-#wrap > header {
+#wrap>header {
   /* Formato */
   border-radius: 0.5rem;
   margin: 0.5rem;
   display: flex;
   align-items: center;
+
   /* Fundo */
   background-attachment: scroll;
   background-color: purple;
@@ -118,7 +121,7 @@ body {
 }
 
 /* Logotipo */
-#wrap > header a {
+#wrap>header a {
   display: block;
   font-size: 4rem;
   color: rgb(82, 0, 82);
@@ -127,7 +130,7 @@ body {
 }
 
 /* Título */
-#wrap > header h1 {
+#wrap>header h1 {
   margin: 0;
   font-size: 1.6rem;
   color: rgb(255, 255, 255);
@@ -135,7 +138,7 @@ body {
 }
 
 /* Slogan abaixo do título */
-#wrap > header small {
+#wrap>header small {
   display: block;
   font-size: 0.9rem;
   font-weight: normal;
@@ -146,59 +149,62 @@ body {
  ******************/
 
 /* Formato do quadro */
-#wrap > nav {
+#wrap>nav {
   background-color: rgb(99, 45, 121);
   border-radius: 0.5rem;
   margin: 0.5rem;
   margin-top: 0;
   display: flex;
   align-items: center;
+
   /* Alinha itens do menu à esquerda */
   justify-content: flex-end;
 }
 
 /* Itens do menu */
-#wrap > nav a {
+#wrap>nav a {
   padding: 0.7rem;
   text-align: center;
   color: rgb(255, 240, 255);
   text-decoration: none;
+
   /* Efeito de transição */
   transition: 0.25s;
 }
 
 /* Itens com cursor sobre (hover) */
-#wrap > nav a:hover {
+#wrap>nav a:hover {
   color: rgb(250, 167, 250);
 }
 
 /* Link da página inicial */
-#wrap > nav a:first-child {
+#wrap>nav a:first-child {
+
   /* Desloca para a esquerda em relação aos outros links */
   margin-right: auto;
 }
 
-/* Ícones */
-#wrap > nav i {
+/* Ícones do menu */
+#wrap>nav i {
   font-size: 2rem;
 }
 
-/* Labels */
-#wrap > nav span {
+/* Labels do menu */
+#wrap>nav span {
   display: block;
   margin-top: 0.3rem;
 }
 
-/* Torna o menu principal responsivo à telas maiores  */
-
+/* Torna o menu principal responsivo à telas maiores */
 @media screen and (min-width: 480px) {
+
   /* Diminui tamanho dos ícones */
-  #wrap > nav i {
+  #wrap>nav i {
     font-size: 1.2rem;
   }
 
   /* Alinha labels com os ícones horizontalmente */
-  #wrap > nav span {
+  #wrap>nav span {
     display: inline-block;
     margin-top: 0;
   }
@@ -208,41 +214,44 @@ body {
  * Conteúdo *
  ************/
 
-#wrap > main {
+#wrap>main {
   display: flex;
   flex-direction: column;
 }
 
-#wrap > main article,
-#wrap > main aside {
+/* Conteúdo principal e complementar */
+#wrap>main article,
+#wrap>main aside {
   background-color: white;
   border-radius: 0.5rem;
   margin: 0 0.5rem;
   padding: 0 1rem;
+
   /* Assume margens dos elementos inicial e final */
   overflow: auto;
 }
 
-#wrap > main aside {
+/* Conteúdo complementar */
+#wrap>main aside {
   margin: 0.5rem;
 }
 
-/* Torna o conteúdo responsivo à telas maiores  */
-
+/* Torna o conteúdo responsivo à telas maiores */
 @media screen and (min-width: 768px) {
-  #wrap > main {
-    /* Desloca conteúdo complementar para a lateral */
+
+  /* Desloca conteúdo complementar para a lateral */
+  #wrap>main {
     flex-direction: row;
   }
 
-  #wrap > main article {
-    /* Conteúdo principal maior */
+  /* Conteúdo principal maior */
+  #wrap>main article {
     flex-grow: 1;
     margin-bottom: 0.5rem;
   }
 
   /* Formata barra lateral */
-  #wrap > main aside {
+  #wrap>main aside {
     margin: 0 0.5rem 0 0;
     min-width: 220px;
     max-width: 220px;
@@ -254,7 +263,7 @@ body {
  * Rodapé *
  **********/
 
-#wrap > footer {
+#wrap>footer {
   background-color: rgb(99, 45, 121);
   border-radius: 0.5rem;
   margin: 0.5rem;
@@ -263,7 +272,6 @@ body {
 }
 
 /* Bloco superior do rodapé */
-
 #fsup {
   display: flex;
   align-items: center;
@@ -271,6 +279,7 @@ body {
   border-bottom: 1px dotted rgb(249, 84, 249);
 }
 
+/* Links do bloco */
 #fsup a {
   padding: 0.5rem;
   text-align: center;
@@ -280,23 +289,25 @@ body {
   font-size: 1.5rem;
 }
 
+/* Links do bloco quando curso passar sobre (:hover) */
 #fsup a:hover {
   color: rgb(250, 167, 250);
 }
 
 /* Bloco inferior do rodapé */
-
 #finf {
   display: flex;
   padding: 0.5rem;
   justify-content: space-between;
 }
 
+/* Títulos dos menus */
 #finf h4 {
   margin: 0 0 0.7rem 0;
   font-weight: normal;
 }
 
+/* Links do bloco */
 #finf nav a {
   display: block;
   padding: 0.3rem 0;
@@ -304,39 +315,42 @@ body {
   color: rgb(255, 240, 255);
 }
 
+/* Links do bloco quando curso passar sobre (:hover) */
 #finf nav a:hover {
   color: rgb(250, 167, 250);
   text-decoration: none;
 }
 
-/* Rodapé responsivo */
-
+/* Torna o rodapé responsivo à telas maiores */
 @media screen and (min-width: 426px) {
+
+  /* Ajusta posição dos menus inferiores */
   #finf {
     justify-content: space-around;
   }
 }
 
-/* 
-    Sticky Footer
-    Força o rodapé a aparecer sempre na parte inferior da tela,
-    independentemente de quanto conteúdo a página tem, aumentando
-    automaticamente a altura de <main>.
+/**
+ * Sticky Footer
+ * Força o rodapé a aparecer sempre na parte inferior da tela,
+ * independentemente de quanto conteúdo a página tem, aumentando
+ * automaticamente a altura de <main> e de <article>.
 */
 
+/* Torna elementos de "#wrap" flexbox e os empilha verticalmente */
 #wrap {
   display: flex;
   flex-direction: column;
 }
 
-#wrap > main {
+/* Força crescimento de <main> e de <article> */
+#wrap>main, #wrap>main article {
   flex-grow: 1;
 }
 
-#wrap > main article {
-  flex-grow: 1;
-}
+/* Fim do Sticky Footer */
 
-#wrap > span {
+/* Rack para exibir margem inferior do <footer> */
+#wrap>span {
   font-size: 1px;
 }
