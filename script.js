@@ -19,7 +19,7 @@
  * runApp() → Aplicativo principal
  * Este aplicativo é executado pela última linha deste código.
  */
-function runApp() {
+ function runApp() {
 
   // Carrega a página inicial do site quando este iniciar:
   loadPage('home');
@@ -92,7 +92,23 @@ function routerLink() {
  */
 function loadPage(href) {
 
-  console.log(href);
+  var page = {
+    "html": `/pages/${href}/index.html`,
+    "css": `/pages/${href}/style.css`,
+    "js": `/pages/${href}/script.js`
+  }
+
+  $.get(page.html, function (content) {
+    
+    // Carrega o CSS desta página na página inicial
+    $('#pageCSS').attr('href', page.css);
+
+    // Exibe HTML na página
+    $('#content').html(content);
+
+    // Executa o JavaScript
+    $.getScript(page.js);
+  });
 
 }
 
